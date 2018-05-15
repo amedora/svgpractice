@@ -4,6 +4,10 @@
     <svg viewbox="0 0 300 300" width="300" height="300">
       <line :x1="x1" y1=100 x2=200 y2=200 stroke="black"></line>
     </svg>
+    <!-- https://developer.mozilla.org/en-US/docs/Web/SVG/Tutorial/SVG_Image_Tag -->
+    <svg width="300" height="300">
+      <image xlink:href="https://jp.vuejs.org/images/logo.png" width="300" height="300" />
+    </svg>
     <div>
       <input type="range" v-model="x1">
     </div>
