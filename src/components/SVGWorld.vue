@@ -6,19 +6,38 @@
     </svg>
     <!-- https://developer.mozilla.org/en-US/docs/Web/SVG/Tutorial/SVG_Image_Tag -->
     <svg width="600" height="300">
-      <image xlink:href="https://jp.vuejs.org/images/logo.png" width="300" height="300" />
-      <image xlink:href="https://jp.vuejs.org/images/laravel.png" x="300" width="300" height="300" />
+      <vue-flip width="300px" :active-click="true">
+        <div slot="front">
+          <image xlink:href="https://jp.vuejs.org/images/logo.png" width="300" height="300" />
+        </div>
+        <div slot="back">
+          <image xlink:href="https://jp.vuejs.org/images/laravel.png" x="300" width="300" height="300" />
+        </div>
+      </vue-flip>
     </svg>
     <div>
       <input type="range" v-model="x1">
     </div>
+    <vue-flip width="200px" :active-click="true">
+      <div slot="front">
+        <p>front</p>
+      </div>
+      <div slot="back">
+        <p>back</p>
+      </div>
+    </vue-flip>
   </div>
   
 </template>
 
 <script>
+import VueFlip from 'vue-flip'
+
 export default {
   name: 'SVGWorld',
+  components: {
+    VueFlip
+  },
   data () {
     return {
       msg: 'Welcome to SVG World',
